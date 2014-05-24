@@ -1,0 +1,25 @@
+CodeBook
+========================================================
+
+The final tidy data is contained in "data_tidy.txt" (or "data_tidy.csv").
+
+This data contains 180 rows and 68 columns. The first two columns are "activity" and "subject". 
+
+"activity" describes the activity that the subject is performing, including the following 6 categories: "laying", "sitting", "standing", "walking", "walkingdownstairs" and "walkingupstairs".
+
+"subject" contains the id of the subject, ranging from 1 to 30.
+
+The rest 66 columns are the mean and std features, the names are taken from features.txt and are processed so that it contains only lower case letters. Detailed processing can be found in README.md. The value of these 66 columns are the average values taken for each activity and each subject.
+
+The column names are:
+```{r}
+data <- read.table("./data_tidy.txt")
+colnames(data)
+```
+
+The first 6 rows of the data looks like this:
+```{r}
+head(data)
+```
+
+
